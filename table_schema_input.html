@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table Schema Form</title>
+    <link rel="stylesheet" href="style.css">
+<style>
+    #tableContainer {
+        margin-top: 20px;
+    }
+    
+    .tableSection {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .tableHeader {
+        margin-bottom: 10px;
+    }
+    
+    .columnInputs {
+        margin-top: 5px;
+    }
+    
+    .columnInputs input, .columnInputs select {
+        margin-right: 10px;
+    }
+</style>
+
+</head>
+<body>
+    <h1>Table Schema Creator</h1>
+    <form id="schemaForm">
+        <button type="button" id="addTable">Add Table</button>
+        <div id="tableContainer"></div>
+        <button type="submit">Submit All Tables</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
