@@ -12,4 +12,4 @@ All the logic is contained in the index.html file. You can just drop it into net
 
 You bring your own API keys from providers like Anyscale, TogetherAI, Groq and OpenAI and just get started. I've added a few task templates that help you get started.
 
-I have a roadmap (see the Wiki) and will build this gradually.
+I have a roadmap https://github.com/harshsinghal/fastiq/wiki/Roadmap and I'm excited to build these features over time. 
