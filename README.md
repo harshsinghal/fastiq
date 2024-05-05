@@ -1,15 +1,30 @@
-# FastIQ
+# React + TypeScript + Vite
 
-![Fast IQ_transparent](https://github.com/harshsinghal/fastiq/assets/504641/48cdc7f4-347a-4b63-8185-dd72e4b2c627)
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Hi, I'm Harsh.
+Currently, two official plugins are available:
 
-I developed Fast IQ to speed up playing with LLMs from different providers and to avoid writing prompt boilerplate.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-FastIQ is currently available on https://fastiq.netlify.app and runs in the browser. There is no server that is routing your queries to the chosen provider. The queries are sent directly from your browser to the LLM provider. 
+## Expanding the ESLint configuration
 
-All the logic is contained in the index.html file. You can just drop it into netlify.app and run your own version of FastIQ. 
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-You bring your own API keys from providers like Anyscale, TogetherAI, Groq and OpenAI and just get started. I've added a few task templates that help you get started.
+- Configure the top-level `parserOptions` property like this:
 
-I have a roadmap https://github.com/harshsinghal/fastiq/wiki/Roadmap and I'm excited to build these features over time. 
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
